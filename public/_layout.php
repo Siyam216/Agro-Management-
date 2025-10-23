@@ -29,6 +29,10 @@ function page_header(string $title) {
     <a href='production.php'>Production</a>
     <a href='feeding.php'>Feeding</a>
     <a href='health.php'>Health</a>
+    <a href='analytics.php'>Analytics</a>
+    <a href='search.php'>Advanced Search</a>
+    <a href='routines.php'>Routines</a>
+
   </nav></header><main>";
 }
 
