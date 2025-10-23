@@ -1,24 +1,21 @@
-<?php ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Agro Management System</title>
-  <style>
-    body{font-family:system-ui,Arial;padding:24px;background:#0f172a;color:#e2e8f0}
-    a.btn{display:inline-block;margin:10px 0;padding:10px 16px;background:#22c55e;color:#0f172a;
-         text-decoration:none;border-radius:8px;font-weight:700}
-    code{background:#111827;padding:2px 6px;border-radius:4px}
-  </style>
-</head>
-<body>
-  <h1>Agro Management System</h1>
-  <p>DB: <code>agro_mgmt</code>. Start by running the schema in phpMyAdmin or MySQL client.</p>
-  <ol>
-    <li>Import <code>schema/schema.sql</code> into MySQL.</li>
-    <li>Update DB creds in <code>config/db.php</code> if needed.</li>
-    <li>Open the demo queries page:</li>
-  </ol>
-  <p><a class="btn" href="demo_queries.php">Open Demo & SQL Examples</a></p>
-</body>
-</html>
+<?php
+require_once __DIR__ . '/../config/db.php';
+require_once __DIR__ . '/../lib/helpers.php';
+require_once __DIR__ . '/_layout.php';
+
+page_header('Agro Management - Home');
+?>
+<div class="card">
+  <h2>Welcome</h2>
+  <p>Click an operation:</p>
+  <ul>
+    <li><a href="farmers.php">Manage Farmers (add / edit / delete / list)</a></li>
+    <li><a href="animals.php">Manage Animals (add / edit / delete / list)</a></li>
+    <li><a href="relations.php">Which farmer owns which animals</a></li>
+    <li><a href="production.php">Production (milk / eggs / weight) add & view</a></li>
+    <li><a href="feeding.php">Feed master & Feeding schedule</a></li>
+    <li><a href="health.php">Health records</a></li>
+  </ul>
+  <p class="muted">DB: agro_mgmt (MySQL). All writes use prepared statements.</p>
+</div>
+<?php page_footer(); ?>

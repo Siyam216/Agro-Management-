@@ -1,8 +1,9 @@
 <?php
+// config/db.php
 $DB_HOST = '127.0.0.1';
 $DB_NAME = 'agro_mgmt';
-$DB_USER = 'root';  // XAMPP default
-$DB_PASS = '';      // XAMPP default empty
+$DB_USER = 'root';   // XAMPP default
+$DB_PASS = '';       // XAMPP default
 $DB_CHARSET = 'utf8mb4';
 
 $dsn = "mysql:host=$DB_HOST;dbname=$DB_NAME;charset=$DB_CHARSET";
